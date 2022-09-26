@@ -1,3 +1,1 @@
-Comment intégrer un composant VichUploader dans la construction d'un formulaire de Symfony ?
-
- ->add('fichierImage', VichFileType::class)
+Comment configurer le chemin de destination des fichiers téléversés par le composant VichUploader ?
