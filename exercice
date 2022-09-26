@@ -1,13 +1,1 @@
-Comment enregistre-t-on le contenu du fichier lors de la validation du formulaire
-dans le dossier « photo/produit » avec comme nom « photo_01.png » ?
-
-En récupérant l'objet « UploadedFile » grâce à la méthode de getData()
-et en utilisant la méthode move de l'objet récupéré.
-
-$fichier = $form->get('brochure')->getData();
-if ($fichier) {
-	$fichier->move(
-		'photo/produit',
-		'photo_01.png'
-	);
-}
+Comment intégrer un composant VichUploader dans la construction d'un formulaire de Symfony ?
