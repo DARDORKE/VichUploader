@@ -1,13 +1,31 @@
 Quelle propriété permet de spécifier si le téléversement du fichier est optionnel ?
 
+- La propriété "required"
+
 Quel est le type MIME permettant de mettre une contrainte sur pdf ?
+
+- applications/pdf
 
 Quelle est la méthode de la classe UploadFile qui permet de sauvegarder le fichier sur le serveur ?
 
+- move()
+
 Comment configure-t-on le chemin de destination du dossier des fichiers téléversés par VichUploader ?
+
+- En spécifiant une clé de mapping avec la propriété upload_destination et uri_prefix du fichier
+config/packages/vich_uploader.yaml.
 
 Comment spécifie-t-on qu'une classe entité est téléchargeable avec VichUploader ?
 
-Quel est le mécanisme de VichUploader pour mettre en mémoire le fichier lorsque nous utilisons Doctrine ?
+- Avec l'annotation @Vich\Uploadable ajoutée à la classe entité.
 
 Quel est le mécanisme de VichUploader pour mettre en mémoire le fichier lorsque nous utilisons Doctrine ?
+
+- Il écoute sur l'événement de modification d'une propriété de l'entité pour gérer l'enregistrement du fichier.
+
+  Il est nécessaire qu'il y ait au moins un champ qui change si nous utilisons Doctrine, sinon les écouteurs
+  d'événements ne seront pas appelés et le fichier est perdu.
+
+  Pour ajouter la classe Vich\UploaderBundle\Form\Type\VichFileType à la construction d'un formulaire,
+  il est important de spécifier le nom du composant form qui se trouve dans l'entité et qui
+  sert à stocker les données binaires du fichier téléversé avec l'annotation @Vich\UploadableField.
