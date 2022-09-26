@@ -1,1 +1,3 @@
 Comment intégrer un composant VichUploader dans la construction d'un formulaire de Symfony ?
+
+ ->add('fichierImage', VichFileType::class)
