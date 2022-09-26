@@ -1,0 +1,11 @@
+Ajouter un FileType dans la construction du formulaire avec les propriétés suivantes :
+
+Taille maximale : 256 k,
+
+Type de fichier PDF,
+
+Obligatoire,
+
+Avec, comme intitulé : Brochure pdf,
+
+Nom du composant : brochure.
