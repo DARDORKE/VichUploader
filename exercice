@@ -1,1 +1,9 @@
 Comment configurer le chemin de destination des fichiers téléversés par le composant VichUploader ?
+
+Il faut créer des mappings dans le fichier de configuration de VichUploader et spécifier l'url d'affichage
+ depuis le site (uri_prefix) ainsi que l'url de stockage de fichier (upload_destination).
+ 
+ mappings:
+         produit_images:
+             uri_prefix: '%app.path.produit_images%'
+             upload_destination: '%kernel.project_dir%/public%app.path.produit_images%'
